@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/arte.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Friday - Arte da Lingerie</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/baner-header.jpg">
+        <!-- <img src="assets/logo_branco.png" > -->
+    </header>
+    <section class="produtos">
+        <h1>Alguns dos nossos produtos em promoção</h1>
+        <div class="produtos-content">                
+                <div class="produto">
+                <img src="assets/produtos/20190621_134128.jpg">
+                <span class="fa-blink"> Conjunto Dany<br>50% OFF</span>                 
+                </div>
+                
+                <div class="produto">
+                <img src="assets/produtos/20201217_094632.jpg">
+                <span> Conjunto Emily <br>30% OFF</span>                 
+                </div>
+                
+                <div class="produto">
+                <img src="assets/produtos/20200817_093400.jpg">
+                <span> Conjunto Faby <br>40% OFF</span>                
+                </div>
+            
+                
+                <div class="produto">
+                <img src="assets/produtos/20210118_170222.jpg">
+                <span class="fa-blink"> Conjunto Josy <br>50% OFF</span>                 
+                </div>
+                
+                <div class="produto">
+                <img src="assets/produtos/20210318_114235.jpg">
+                <span class="fa-blink"> Conjunto July <br>50% OFF</span>                 
+                </div>
+                
+                <div class="produto">
+                <img src="assets/produtos/20210129_173320.jpg">
+                <span> Conjunto Karla <br>30% OFF</span>             
+                </div>
+                
+                <div class="produto">
+                <img src="assets/produtos/20200720_143620.jpg">
+                <span> Conjunto Karol <br>40% OFF</span>                
+                </div>            
+                
+                <div class="produto">                
+                <img src="assets/produtos/20210311_113650.jpg">
+                <span class="fa-blink"> Conjunto Laís <br>50% OFF</span>               
+                </div>
+
+        </div>
+    </section>
+<section class="form">
+
+    <h1>Garanta sua participação na nossa Black Friday</h1>
+
+    <div class="campos">
+        <div class="campo-input">
+            <label> Nome:</label>
+            <input type="text" name="nome" id="nome" autocomplete="off" >
+            <span id='info-nome'></span>
+        </div>
+        <div class="campo-input">
+            <label> Email:</label>
+            <input type="text" name="email" id="email" autocomplete="off" >
+            <span id='info-email'></span>
+        </div>      
+
+    </div>
+   
+    <div class="campo-botao">
+        <input type="submit" value="Garantir minha participação" id="form-submit">
+    </div>
+    <div id='info-sucesso'></div>
+     <!-- Fecha content-->
+    
+</section>    
+
+<footer>
+    <div class="redes-sociais">
+        <div class="redes-sociais-item">
+            <a href="https://www.instagram.com/artedalangerieatelie/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="redes-sociais-item">
+            <a href="https://www.facebook.com/artedalangerieatelie" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="redes-sociais-item">
+            <a href="https://wa.me/554792291979" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="redes-sociais-item">
+            <a href="https://goo.gl/maps/dBxNxwxfxx716wCK7" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+
+        </div>
+    </div>
+</footer>
+
+<script>
+
+// var form = document.getElementById("form-id");
+
+document.getElementById("form-submit").addEventListener("click", function () {
+  let infoNome =  document.getElementById("info-nome")
+  let infoEmail =  document.getElementById("info-email")
+  let infoSucesso = document.getElementById("info-sucesso")
+    
+    let nome = document.querySelector("#nome").value;
+    let email = document.querySelector("#email").value;
+
+    if (nome == "") {
+        infoNome.innerHTML = ""
+        infoEmail.innerHTML = ""
+        infoNome.innerHTML = "Por gentileza, informe o seu nome!"
+    } else if ((email == '') || (email.indexOf('@')==-1) || (email.indexOf('.')==-1)){
+        infoNome.innerHTML = ""
+        infoEmail.innerHTML = ""
+        infoEmail.innerHTML = "Por gentileza, informe um email válido!"
+    } else {
+        infoNome.innerHTML = ""
+        infoEmail.innerHTML = ""
+    let dadosContato = {nome: nome, email: email}
+    localStorage.setItem('dados-contato', JSON.stringify(dadosContato));
+    infoSucesso.innerHTML = nome+ "! Sua participação está garantida!<br>Muito brigada!"
+}
+  
+});
+
+
+    </script>
+</body>
+</html>
