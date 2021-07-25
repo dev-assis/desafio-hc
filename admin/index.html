@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/arte.ico" type="image/x-icon" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área administrativa - Arte da Lingerie</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="assets/logo.png">
+        <h1>Área administrativa</h1>
+    </header>
+    <nav>
+    <a href="#" id="mostrar-form-produto">Produtos</a>
+    <a href="#" id="mostrar-form-cliente">Clientes</a> 
+    </nav>
+<section class="form" id="form-produtos" style="display: none" >
+
+    <h1>Gestão de produtos</h1>
+
+    <div class="campos">
+        <div class="campo-input" class="campo-formatado">
+            <label> Nome:</label>
+            <input type="text" name="nome" id="nome" autocomplete="off" class="campo-formatado">
+            <span id='info-nome'></span>
+        </div>
+        <div class="campo-input">
+            <label> Categoria:</label>
+            <select type="text" name="categoria" id="categoria" class="campo-formatado">
+                <option value=""></option>
+                <option>Conjunto</option>
+                <option>Calcinha</option>
+                <option>Sutiã</option>
+                <option value="">Infantil</option>
+                </select>
+            <span id='info-categoria'></span>
+        </div>
+        <div class="campo-input">
+            <label> Valor:</label>
+            <input type="text" name="valor" id="valor" autocomplete="off" class="campo-formatado">
+            <span id='info-valor'></span>
+        </div>
+        <div class="campo-input">
+            <label> Cores disponíveis:</label>
+            <input type="text" name="cores" id="cores" autocomplete="off" class="campo-formatado">
+            <span id='info-cores'></span>
+        </div>
+        <div class="campo-input">
+            <label> Tamanho:</label><br>
+            <select type="text" name="tamanho" id="tamanho" class="campo-formatado">
+                <option value=""></option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+                </select>
+            <span id='info-tamanho'></span>
+        </div>     
+        <div class="campo-input">
+            <label> Descrição:</label>
+            <textarea type="text" name="descricao" id="descricao" autocomplete="off" class="campo-formatado"></textarea>
+            <span id='info-descricao'></span>
+        </div>  
+    </div>
+   
+    <div class="campo-botao">
+        <input type="submit" value="Cadastrar" id="produto-submit">
+    </div>
+    <div id='info-sucesso-produto'></div>
+    
+</section>    
+
+<section class="form" id="form-clientes" style="display: none ;">
+
+    <h1>Gestão de Clientes</h1>
+
+    <div class="campos">
+        <div class="campo-input" class="campo-formatado">
+            <label> Nome:</label>
+            <input type="text" name="nome-cliente" id="nome-cliente" autocomplete="off" class="campo-formatado">
+            <span id='info-nome-cliente'></span>
+        </div>
+        <div class="campo-input">
+            <label> E-mail:</label>
+            <input type="text" name="email" id="email" autocomplete="off" class="campo-formatado">
+            <span id='info-email'></span>
+        </div>
+        <div class="campo-input">
+            <label> Cidade:</label>
+            <input type="text" name="cidade" id="cidade" autocomplete="off" class="campo-formatado">
+            <span id='info-cidade'></span>
+        </div>
+
+        <div class="campo-input">
+            <label> Endereço:</label>
+            <input type="text" name="endereco" id="endereco" autocomplete="off" class="campo-formatado">
+            <span id='info-endereco'></span>
+        </div>
+ 
+    </div>
+   
+    <div class="campo-botao">
+        <input type="submit" value="Cadastrar" id="cliente-submit">
+    </div>
+    <div id='info-sucesso-cliente'></div>
+    
+</section> 
+
+<br><br>
+<footer>
+    <div class="redes-sociais">
+        <div class="redes-sociais-item">
+            <a href="https://www.instagram.com/artedalangerieatelie/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="redes-sociais-item">
+            <a href="https://www.facebook.com/artedalangerieatelie" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+        <div class="redes-sociais-item">
+            <a href="https://wa.me/554792291979" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        <div class="redes-sociais-item">
+            <a href="https://goo.gl/maps/dBxNxwxfxx716wCK7" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
+
+        </div>
+    </div>
+</footer>
+<script src="scripts.js"></script>
+</body>
+</html>
